@@ -1,0 +1,67 @@
+header { width: 445px; margin-left:10%; }
+h1 { text-align: center; }
+
+div#toDo { 
+
+	position: absolute; 
+
+	background-image: url("notebook.jpg"); 
+	background-repeat: no-repeat;
+	
+	width: 445px;
+	height: 581px;	
+	
+	margin-left:10%; 		
+}
+
+div#taskList {
+
+	font-family: 'Annie Use Your Telescope', arial;
+	margin: 108px 40px 0 65px; 
+	line-height: 1em; 
+}
+
+div#taskList p {margin-top: 0; margin-bottom: 7px; }
+
+.dueBy {
+	
+	float: right; 
+	color: red;
+}
+
+button#addTask { 
+	
+	position: absolute; 
+	right: 20px; 
+	top: 20px; 
+}
+
+input#task { 
+	
+	width: 89%; 
+}
+
+button#add {
+	
+	float:right;
+}
+
+/**default input into the deadline text box faded gray**/ 
+#deadline {    
+	color: gray; 
+}
+
+/**when a date is selected adds class normalText to make the text black and solemn**/ 
+#deadline.normalText {
+	color: black;
+}
+
+#noDeadlineButton {
+	font-size: 12px; 
+	margin-top: -7.4em; 
+	margin-right: -3.5 em; 
+}
+
+#noDeadlineButton .ui-button-text {
+	padding: 0.2em 0.5em; 
+}

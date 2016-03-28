@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<title>To Do List</title>
+		
+		<link href='https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope' rel='stylesheet' type='text/css'>
+		<!--google font-->
+		
+		<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+		<link rel="stylesheet" href="css/toDo.css" type="text/css">
+		<!--stylesheets-->	
+</head>
+
+<body>
+<header>
+	<h1>To Do List</h1>
+</header>
+	
+	
+<main>
+
+<div id="toDo">
+ 
+ 	<button id="addTask">Add a task</button>
+
+	<div id="taskPopup" title="New Task"><!--prompts user to enter a task and deadline-->
+ 		 <form>
+ 			<input type="text" name="task" id="task">
+ 			<p>Due by: <input type="text" id="deadline" readonly="true"></p>	
+ 		 </form>
+	</div><!-- end taskPopup-->
+	
+	<div id="taskList">
+	
+		
+
+	</div>
+	
+</div><!-- end toDo div-->
+ 
+ <div id="completedTasks">
+ 
+ </div>
+
+</main>
+
+
+<script src="js/jquery.js"></script>
+<!-- jQuery library -->
+<script src="js/jquery-ui.min.js"></script> 
+<!-- jQuery UI -->
+<script src="js/toDo.js"></script>
+</body>
+</html>
