@@ -17,16 +17,74 @@ div#toDo {
 div#taskList {
 
 	font-family: 'Annie Use Your Telescope', arial;
-	margin: 108px 40px 0 65px; 
+	margin: 106px 40px 0 65px; 
 	line-height: 1em; 
+	font-size: 15pt; 
 }
 
-div#taskList p {margin-top: 0; margin-bottom: 7px; }
+div#taskList p {margin-top: 0; margin-bottom: 7px; height: 16px;}
+
+.taskName {
+
+	margin-left: 35px; 
+	cursor: pointer; 
+}
+
+.taskLineThru {
+ 	position: absolute; 
+ 	font-style: italic; 
+}
+
+
+/**a black pseudo element positioned to look like a line-through**/ 
+.taskLineThru:before {
+
+	content: ""; 
+	position: absolute; 
+	top: 50%; 
+	left: -5px; 
+	right: -5px; 
+	height: 2px; 
+	background: black; 
+}
+
+/**get icon to display alongside taskName**/ 
+
+.ui-icon-check {
+
+	margin-left: 8px; 
+	display: inline-block; 
+	position: absolute; 
+}
+
+.ui-icon-folder-open {
+
+	display: inline-block;
+	position: absolute;
+	left: 360px;
+}
+
+.deleteIcon {
+	
+	background-image: url("images/erase.png"); 
+	display:inline-block; 
+	height: 24px; 
+	width:24px;
+	position: relative; 
+	top: -10px; 
+	left:250px;  
+	cursor:pointer; 
+}
 
 .dueBy {
 	
 	float: right; 
+	margin-right: 60px; 
 	color: red;
+}
+
+.hide {
+	display: none; 
 }
 
 button#addTask { 

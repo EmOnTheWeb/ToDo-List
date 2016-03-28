@@ -105,8 +105,12 @@ $("#taskPopup").dialog({
 						var daysLeftString = task.timeLeft(); 
 						
 						var taskNameString = '<span class="taskName">'+taskName+'</span>'; 
+						
+						var icons = '<span class="ui-icon ui-icon-check hide"></span>';
+						icons +='<span class="deleteIcon hide"></span>'; 
+						icons +='<span class="ui-icon ui-icon-folder-open hide"></span>'; 
 				
-						$("#taskList").append('<p>'+taskNameString + daysLeftString+'</p>');  //add task and time left to DOM
+						$("#taskList").append('<p>'+taskNameString + daysLeftString+icons+'</p>');  //add task and time left to DOM
 					
 					}
 			
@@ -136,6 +140,20 @@ $("#deadline").datepicker({ //initialize datepicker
 $("#deadline").change(function() {   //change event only triggered when user has chosen datepicker date, not when val is changed to 'do at leisure'		
 
 	$("#deadline").addClass("normalText"); 
+});
+
+$("#taskList").on("click", ".taskName", function(e) {  //click on taskName to mark as done
+	  
+	$(e.target).toggleClass("taskLineThru").siblings().toggleClass("hide");  //siblings() selects dueBy and icons. hides dueBy, shows icons		
+}); 
+
+$("#taskList").on("click",".deleteIcon", function(e) {
+
+	$(e.target).parent().remove(); //removes task paragraph from DOM
+}); 
+
+$( ".deleteIcon" ).tooltip({
+  content: "Awesome title!"
 });
 
 
